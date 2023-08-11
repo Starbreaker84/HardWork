@@ -1,0 +1,32 @@
+package hardWork.lesson04_3;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+    private final String name;
+
+    private final List<Integer> scores;
+
+    public Student(String name, List<Integer> scores) {
+        this.name = name;
+        this.scores = scores;
+    }
+
+    public Student(String name) {
+        this.name = name;
+        this.scores = new ArrayList<>();
+    }
+
+    void addScore(Integer score) {
+        scores.add(score);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", scores=" + scores +
+                '}';
+    }
+}
